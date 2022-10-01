@@ -75,8 +75,11 @@ public class arrayMethods {
 		String lastName = "B";
 		System.out.println(fullName(firstName, lastName));
 	
-		int[] arrays = {49, 51};
+		int[] arrays = {24, 25, 50, 2};
 		System.out.println(greaterThanHundred(arrays));
+		
+		double[] arrayElements = {5, 20, 12, 50, 4};
+		System.out.println(arrayAvg(arrayElements));
 	}
 	
 static String wordRepeat(String word, int n){
@@ -114,11 +117,22 @@ static boolean greaterThanHundred(int[] arrays) {
 			newBoo = true;
 		return newBoo;
 		}
-		else {
+
 		newBoo = false;
 		return newBoo;
-		}
+}
+
+//Question 10=====================================================================================================================================
+
+static double arrayAvg(double[] arrayElements) {
+	
+		double elementSum = 0;
 		
+		for(int i = 0; i< arrayElements.length; i++) {
+			elementSum += arrayElements[i];
+		}
+			return elementSum / arrayElements.length;
+	
 }
 
 
