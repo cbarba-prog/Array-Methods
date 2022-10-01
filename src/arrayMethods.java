@@ -80,6 +80,19 @@ public class arrayMethods {
 		
 		double[] arrayElements = {5, 20, 12, 50, 4};
 		System.out.println(arrayAvg(arrayElements));
+		
+		double[] firstElements = {6, 7 , 8, 9, 10};
+		double[] secondElements = {1, 2, 3, 4, 5};
+		System.out.println(doubleAvg(firstElements, secondElements));
+		
+		boolean isHotOutside = true;
+		double moneyInPocket = 11;
+		System.out.println(willBuyDrink(isHotOutside, moneyInPocket));
+		
+		int num1 = 2;
+		int num2 = 10;
+		System.out.println(multiplyNum(num1, num2));
+		
 	}
 	
 static String wordRepeat(String word, int n){
@@ -135,7 +148,46 @@ static double arrayAvg(double[] arrayElements) {
 	
 }
 
+//Question 11======================================================================================================================================
 
+static boolean doubleAvg(double[] firstElements, double[] secondElements) {
+	
+	double firstSum = 0, secondSum = 0;
+	boolean firstBoo;
+	
+	for(int i = 0; i < firstElements.length; i++) {
+		firstSum = firstElements[i];
+	}
+	for(int j = 0; j < secondElements.length; j++) {
+		secondSum = secondElements[j];
+	}
+		firstSum = firstSum / firstElements.length;
+		secondSum = secondSum / secondElements.length;
+		
+		if(firstSum > secondSum) {
+			
+			return firstBoo = true;
+		}
+			return firstBoo = false;
+}
+
+//Question 12====================================================================================================================================
+
+static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
+		
+		if (isHotOutside == true && moneyInPocket > 10.50) 
+			return true;
+		else
+			return false;
+	}
+
+//Question 13====================================================================================================================================
+
+static int multiplyNum(int num1, int num2) {
+	
+		return num1*num2;
+
+}
 
 
 }
