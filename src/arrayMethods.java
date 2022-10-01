@@ -72,18 +72,13 @@ public class arrayMethods {
 	
 //Question 7====================================================================================================================================
 		
-		System.out.println("Enter one word");
-		String word = myObj.nextLine();
-		System.out.println("Enter a number");
-		int n = myObj.nextInt();
-		myObj.nextLine();
+		String word = "Hello";
+		int n = 5;
 		System.out.println("Repeat word: " +wordRepeat(word,n));
 		
 		//Q8
-		System.out.println("Enter first name");
-		String firstName = myObj.nextLine();
-		System.out.println("Enter last name");
-		String lastName = myObj.nextLine();
+		String firstName = "Chris";
+		String lastName = "Barba";
 		System.out.println("Full Name is: " + fullName(firstName, lastName));
 	
 		//Q9
