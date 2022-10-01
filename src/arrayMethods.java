@@ -1,15 +1,18 @@
+import java.util.Scanner; 
 
 public class arrayMethods {
 	
 	public static void main(String[] args) {
+		Scanner myObj = new Scanner(System.in);
 		// TODO Auto-generated method stub
 		
 //Question 1=================================================================================================================================
-		
+		//A
 		int[] ages = {3, 9, 23, 64, 2, 8, 28, 93};
 		
 		System.out.println("Last minus first number in array: " + ((ages[ages.length-1])-(ages[ages.length-ages.length])));
 
+		//B
 		int[] newAges = new int[ages.length+1];
 		
 		for(int i=0;i<ages.length;i++){
@@ -21,7 +24,8 @@ public class arrayMethods {
 		ages = newAges;
 		
 		System.out.println("New last minus first number in array: " + ((ages[ages.length-1])-(ages[ages.length-ages.length])));
-
+		
+		//C
 		double averageSum = 0;
 		
 		for(int i=0;i<ages.length;i++){
@@ -30,7 +34,7 @@ public class arrayMethods {
 		System.out.println("Average age: " + (averageSum/ages.length));
 		
 //Question 2==================================================================================================================================
-		
+		//A
 		String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
 		
 	    double averageName = 0;
@@ -40,6 +44,7 @@ public class arrayMethods {
 		}
 		System.out.println("Average letters in name length: " + (averageName/names.length));
 		
+		//B
 		String fullString = "";
 		
 		for(int i=0;i<names.length;i++){
@@ -62,36 +67,47 @@ public class arrayMethods {
 		for(int i=0;i<nameLengths.length;i++){
 			lengthSum += nameLengths[i];
 		}
-		System.out.println(lengthSum);
+		System.out.println("Sum of all elements in array: " + lengthSum);
 		
 	
 //Question 7====================================================================================================================================
 		
-		String word = "Hello";
-		int n = 3;
-		System.out.println(wordRepeat(word,n));
+		System.out.println("Enter one word");
+		String word = myObj.nextLine();
+		System.out.println("Enter a number");
+		int n = myObj.nextInt();
+		myObj.nextLine();
+		System.out.println("Repeat word: " +wordRepeat(word,n));
 		
-		String firstName = "Chris";
-		String lastName = "B";
-		System.out.println(fullName(firstName, lastName));
+		//Q8
+		System.out.println("Enter first name");
+		String firstName = myObj.nextLine();
+		System.out.println("Enter last name");
+		String lastName = myObj.nextLine();
+		System.out.println("Full Name is: " + fullName(firstName, lastName));
 	
+		//Q9
 		int[] arrays = {24, 25, 50, 2};
-		System.out.println(greaterThanHundred(arrays));
+		System.out.println("The sum of all values is greater than 100: " + greaterThanHundred(arrays));
 		
+		//Q10
 		double[] arrayElements = {5, 20, 12, 50, 4};
-		System.out.println(arrayAvg(arrayElements));
+		System.out.println("The average of all elements in the array: " +arrayAvg(arrayElements));
 		
+		//Q11
 		double[] firstElements = {6, 7 , 8, 9, 10};
 		double[] secondElements = {1, 2, 3, 4, 5};
-		System.out.println(doubleAvg(firstElements, secondElements));
+		System.out.println("The average in first array is greater than second: " + doubleAvg(firstElements, secondElements));
 		
+		//Q12
 		boolean isHotOutside = true;
 		double moneyInPocket = 11;
-		System.out.println(willBuyDrink(isHotOutside, moneyInPocket));
+		System.out.println("Will you buy a drink: " + willBuyDrink(isHotOutside, moneyInPocket));
 		
+		//Q13
 		int num1 = 2;
 		int num2 = 10;
-		System.out.println(multiplyNum(num1, num2));
+		System.out.println("The multiple of " + num1 + " and "+ num2 + " equals: " +multiplyNum(num1, num2));
 		
 	}
 	
@@ -183,10 +199,11 @@ static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
 
 //Question 13====================================================================================================================================
 
+//Returns a multiple of 2 numbers 
+
 static int multiplyNum(int num1, int num2) {
 	
 		return num1*num2;
-
 }
 
 
